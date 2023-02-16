@@ -1,0 +1,52 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  position: absolute;
+  background-color: blue;
+}
+
+.sidebar ul{
+  list-style: none;
+  margin: 2rem;
+}
+
+.sidebar ul li{
+  padding: 1rem;
+}
+
+.sidebar ul li a{
+  text-decoration: none;
+  color: white;
+}
+
+.content{
+  margin-left: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid black;
+}
+.content .container{
+  border: 1px solid black;
+  padding: 5rem;
+}
+.content .container .form section{
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.content .container .form button{
+  background-color: blue;
+  cursor: pointer;
+  color: white;
+  margin-top: 2rem;
+  width: 8rem;
+  border: none;
+  border-radius: 0.3rem;
+}
