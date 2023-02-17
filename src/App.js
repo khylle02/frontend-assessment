@@ -5,6 +5,7 @@ import AddUser from './pages/AddUser';
 import DisplayFields from './pages/DisplayFields';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField'
+import ProtectedRoute from './ProtectedRoute';
 
 function App() {
   return (
@@ -12,7 +13,12 @@ function App() {
             <Routes>
                 <Route path="/"element={<Layout />}>
                     <Route index element={<AddUser />}/>
-                    <Route path='/displayfields' element={<DisplayFields />}/>
+                    <Route path='/displayfields' element={
+                        <ProtectedRoute>
+                            <DisplayFields />
+                        </ProtectedRoute>
+                    }/>
+                    
                 </Route>
             </Routes>
       </BrowserRouter>

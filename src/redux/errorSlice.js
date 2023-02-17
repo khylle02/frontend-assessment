@@ -2,13 +2,18 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const errorSlice = createSlice({
     name: 'error',
-    initialState: false,
+    initialState: {
+        form: false,
+    },
     reducers: {
-        setError: (state, action) => {
-            state = action.payload;
+        setFormError: (state, action) => {
+            state.form = action.payload;
+        },
+        setNavError: (state, action) => {
+            state.nav = action.payload;
         }
     }
 });
 
-export const { setError } = errorSlice.actions;
+export const { setFormError, setNavError } = errorSlice.actions;
 export default errorSlice.reducer;

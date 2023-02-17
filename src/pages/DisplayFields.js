@@ -46,9 +46,9 @@ const DisplayFields = () => {
         age: values.age */}
                         {users.map((user, id)=>{
                             return<TableRow key={id}>
-                            <TableCell>{user.firstname}</TableCell>
-                            <TableCell align="right">{user.middleInitial}</TableCell>
-                            <TableCell align="right">{user.lastName}</TableCell>
+                            <TableCell>{user.name.firstname}</TableCell>
+                            <TableCell align="right">{user.name.middleInitial}</TableCell>
+                            <TableCell align="right">{user.name.lastName}</TableCell>
                             <TableCell align="right">{user.number}</TableCell>
                             <TableCell align="right">{user.email}</TableCell>
                             <TableCell align="right">{user.password}</TableCell>
